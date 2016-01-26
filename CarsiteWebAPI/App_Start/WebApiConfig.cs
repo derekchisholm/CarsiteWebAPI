@@ -11,6 +11,8 @@ namespace CarsiteWebAPI
     {
         public static void Register(HttpConfiguration config)
         {
+            config.EnableCors();
+
             // Web API configuration and services
             var clientID = WebConfigurationManager.AppSettings["auth0:ClientId"];
             var clientSecret = WebConfigurationManager.AppSettings["auth0:ClientSecret"];
