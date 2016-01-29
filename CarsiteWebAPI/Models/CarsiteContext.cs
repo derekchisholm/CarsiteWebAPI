@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using MySql.Data.Entity;
 using System.Linq;
 using System.Web;
 
 namespace CarsiteWebAPI.Models
 {
-    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class CarsiteContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
@@ -22,5 +20,7 @@ namespace CarsiteWebAPI.Models
         }
 
         public DbSet<Fillup> Fillups { get; set; }
+
+        public System.Data.Entity.DbSet<CarsiteWebAPI.Models.User> Users { get; set; }
     }
 }
